@@ -89,11 +89,22 @@
     &__link{
         font-weight:$fw-black ;
         color:$link-color;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color:darken($hover-active-colors, 8%);
+            transform: translateX(0rem) translateY(-0.3125rem);
+            text-decoration: underline;
+
+        }
+
+        &:active {
+            color:darken($hover-active-colors, 25%);
+            transform: translateX(0rem) translateY(.125rem);
+            text-decoration:line-through;
+        }
     }
 
-    &__link:hover{
-       text-decoration: underline;
-    }
 
     &__details{
         display: none;
@@ -115,8 +126,8 @@
         font-weight: $fw-xtra-bold;
     }
 
-    &__img{
-        width: 100%;
+    &__demo{
+        max-width: 100%;
         padding-top: 2rem;
         padding-bottom: 3rem;
         border-bottom: .5rem solid $border-color;

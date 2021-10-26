@@ -4,7 +4,24 @@ body{
 .nav{ 
     @include flex-center;
     justify-content: space-between;
-    @include layout-padding;    
+    @include layout-padding;
+
+    
+    &__link{
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color:darken($hover-active-colors, 8%);
+            transform: translateX(0rem) translateY(-0.3125rem);
+        }
+
+        &:active {
+            color:darken($hover-active-colors, 25%);
+            transform: translateX(0rem) translateY(.125rem);
+            text-decoration:line-through;
+        }
+    }
 }
 
 .underline{

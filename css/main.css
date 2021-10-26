@@ -22,13 +22,15 @@ p,
 figure,
 blockquote,
 dl,
+ul,
+li,
 dd {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul {
   list-style: none;
 }
 
@@ -190,7 +192,7 @@ select {
 }
 
 .body--main {
-  font-weight: 600;
+  font-weight: 500;
   color: #1E1D1D;
 }
 @media screen and (min-width: 1919px) {
@@ -230,7 +232,7 @@ select {
 }
 
 .body--bold {
-  font-weight: 600;
+  font-weight: 500;
   font-weight: 700;
   color: #1E1D1D;
 }
@@ -344,6 +346,19 @@ body {
     margin: 0.5rem;
   }
 }
+.nav__link {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav__link:hover {
+  color: #4219a1;
+  transform: translateX(0rem) translateY(-0.3125rem);
+}
+.nav__link:active {
+  color: #230d55;
+  transform: translateX(0rem) translateY(0.125rem);
+  text-decoration: line-through;
+}
 
 .underline {
   border-bottom: solid 4px #1E1D1D;
@@ -386,11 +401,38 @@ main {
 }
 .hero__description {
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 @media screen and (max-width: 768px) {
   .hero__description {
     padding-top: 1.5rem;
   }
+}
+.hero__skills-heading {
+  text-decoration: underline;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+.hero__skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.hero__skills:first-child {
+  padding-right: 15rem;
+}
+.hero__link--light {
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.hero__link--light:hover {
+  color: #4219a1;
+  text-decoration: underline;
+}
+.hero__link--light:active {
+  color: #230d55;
+  text-decoration: line-through;
 }
 .hero__cta {
   display: flex;
@@ -418,6 +460,15 @@ main {
 .hero__link {
   font-weight: 900;
   color: #501EC4;
+  transition: all 0.3s ease;
+}
+.hero__link:hover {
+  color: #4219a1;
+  text-decoration: underline;
+}
+.hero__link:active {
+  color: #230d55;
+  text-decoration: line-through;
 }
 .hero__link {
   margin-right: 5rem;
@@ -537,9 +588,17 @@ main {
 .projects__link {
   font-weight: 900;
   color: #501EC4;
+  transition: all 0.3s ease;
 }
 .projects__link:hover {
+  color: #4219a1;
+  transform: translateX(0rem) translateY(-0.3125rem);
   text-decoration: underline;
+}
+.projects__link:active {
+  color: #230d55;
+  transform: translateX(0rem) translateY(0.125rem);
+  text-decoration: line-through;
 }
 .projects__details {
   display: none;
@@ -561,8 +620,8 @@ main {
   margin-right: 1rem;
   font-weight: 800;
 }
-.projects__img {
-  width: 100%;
+.projects__demo {
+  max-width: 100%;
   padding-top: 2rem;
   padding-bottom: 3rem;
   border-bottom: 0.5rem solid #1E1D1D;
@@ -634,6 +693,17 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  transition: all 0.3s ease;
+}
+.contact__link:hover {
+  color: #4219a1;
+  transform: translateX(0rem) translateY(-0.3125rem);
+  text-decoration: underline;
+}
+.contact__link:active {
+  color: #230d55;
+  transform: translateX(0rem) translateY(0.125rem);
+  text-decoration: line-through;
 }
 .contact__link:last-child {
   padding-bottom: 0rem;

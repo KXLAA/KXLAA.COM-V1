@@ -129,7 +129,7 @@ $h3-font-sizes: (
 /// **** BODY FONT STYLES **** ///
 @mixin body-base{
   @include font-size($p-font-sizes);
-  font-weight: $fw-semi-bold;
+  font-weight: $fw-medium;
 }
 
 @mixin body($style) {

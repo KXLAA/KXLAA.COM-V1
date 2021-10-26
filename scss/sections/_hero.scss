@@ -3,17 +3,52 @@ main{
 }
 
 .hero{
+
   &__heading{
     padding-bottom: .5rem;
   }
 
   &__description{
     padding-top: 3rem; 
+    padding-bottom: 3rem; 
 
     @include respond-to(sm){
       padding-top: 1.5rem; 
     }
   }
+
+  &__skills-heading{
+    text-decoration: underline;
+    font-weight: $fw-semi-bold;
+    padding-bottom: 2rem;
+  }
+
+  &__skills-container{
+    @include flex;
+  }
+
+  &__skills:first-child{
+    padding-right: 15rem
+  }
+
+  &__link--light{
+    font-weight: $fw-semi-bold;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color:darken($hover-active-colors, 8%);
+      text-decoration: underline;
+    }
+
+    &:active {
+      color:darken($hover-active-colors, 25%);
+      text-decoration:line-through;
+    }
+
+  }
+
+
 
   &__cta{
     @include flex;
@@ -37,7 +72,18 @@ main{
   &__link{
     font-weight:$fw-black ;
     color: $link-color;
-}
+    transition: all 0.3s ease;
+
+    &:hover {
+      color:darken($hover-active-colors, 8%);
+      text-decoration: underline;
+    }
+
+    &:active {
+      color:darken($hover-active-colors, 25%);
+      text-decoration:line-through;
+    }
+  }
 
   &__link{
       margin-right: 5rem;

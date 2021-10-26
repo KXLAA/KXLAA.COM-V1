@@ -28,11 +28,28 @@ $contact-font-sizes: (
 
     &__links{
         padding-top: .5rem;
+
+        
     
     }
 
     &__link{
         @include flex(column);
+        transition: all 0.3s ease;
+
+
+        &:hover {
+            color:darken($hover-active-colors, 8%);
+            transform: translateX(0rem) translateY(-0.3125rem);
+            text-decoration: underline;
+
+        }
+
+        &:active {
+            color:darken($hover-active-colors, 25%);
+            transform: translateX(0rem) translateY(.125rem);
+            text-decoration:line-through;
+        }
     }
 
     &__link:last-child{
