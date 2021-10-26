@@ -1,0 +1,12 @@
+body{
+    background-color:$color-white;
+}
+.nav{ 
+    @include flex-center;
+    justify-content: space-between;
+    @include layout-padding;    
+}
+
+.underline{
+    border-bottom: solid 4px $button-primary-bg-color;
+}

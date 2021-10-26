@@ -1,0 +1,52 @@
+@mixin button-base{
+    display: inline-block;
+    text-decoration:none;
+    border-radius: 50rem;
+    padding: 3rem 5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+@mixin full-width-button{
+    @include button-base;
+    display: block !important;;
+    width: 100% !important;
+}
+
+
+.button--primary{
+    @include button-base;
+    color:$button-primary-color;
+    background:$button-primary-bg-color;
+
+    &:hover {
+        background:darken($hover-active-colors, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+    }
+
+    &:active {
+        background:darken($hover-active-colors, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+    } 
+}
+
+.button--full-width{
+    @include full-width-button;
+}
+
+.button--arrow{
+    margin-left: 1rem;
+}
+
+//Hover & Active States
+@mixin hover-active{
+    &:hover {
+        background:darken($hover-active-colors, 8%);
+        transform: translateX(0rem) translateY(-0.3125rem);
+    }
+
+    &:active {
+        background:darken($hover-active-colors, 25%);
+        transform: translateX(0rem) translateY(.125rem);
+    }
+}

@@ -1,0 +1,74 @@
+main{
+    @include layout-padding;
+}
+
+.hero{
+  &__heading{
+    padding-bottom: .5rem;
+  }
+
+  &__description{
+    padding-top: 3rem; 
+
+    @include respond-to(sm){
+      padding-top: 1.5rem; 
+    }
+  }
+
+  &__cta{
+    @include flex;
+    padding-bottom: 3rem; 
+    border-bottom: solid 10px $border-color;
+
+    @include respond-to(sm){
+      border-bottom: solid 7px $border-color;
+      padding-bottom: 1.5rem; 
+    }
+    @include respond-to(xs){
+      border-bottom: solid 6px $border-color;
+    }
+
+    @include respond-to(xxs){
+      padding-bottom: 1rem; 
+    }
+
+  }
+
+  &__link{
+    font-weight:$fw-black ;
+    color: $link-color;
+}
+
+  &__link{
+      margin-right: 5rem;
+
+      @include respond-to(xs){
+        margin-right: 1.5rem;
+      }
+  }
+
+  &__link--right{
+    margin-right: 0rem;
+  }
+
+  &__emoji{
+    @include respond-to(xxs){
+      display: none;
+    }
+    
+  }
+}
+
+
+//TAB FUNCTIONALITY
+[data-tab-content]{
+  display: none;
+}
+
+.active[data-tab-content]{
+  display: block;
+}
+
+.active.tab{
+  color: #501EC4;
+}

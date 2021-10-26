@@ -1,0 +1,154 @@
+/// **** FONT VARIABLES **** ///
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+//Font family
+$font-family: 'Poppins', sans-serif;
+
+//Font Weights
+$fw-light:           300;
+$fw-normal:          400;
+$fw-medium:          500;
+$fw-semi-bold:       600;
+$fw-bold:            700;
+$fw-xtra-bold:       800;
+$fw-black:           900;
+
+$font-size-breakpoints: (
+  x-large : 1919px,
+  large   : 1918px,
+  medium  : 768px, 
+  small   : 480px,
+  x-small : 352px
+)!default;
+
+//FONT-SIZE MAPS [fs-map]
+$p-font-sizes: (
+  x-large:   (4rem, 5.5rem),       //font size: 64px  line Height: 88px
+  large :    (2.5rem, 3.5rem),         //font size: 40px  line Height: 56px
+  medium:    (2rem, 3rem),         //font size: 32px  line Height: 48px
+  small :    (1.1rem, 2rem),       //font size: 24px  line Height: 32px
+  x-small :  (1rem, 1.5rem),       //font size: 24px  line Height:24px
+)!default;
+
+$h1-font-sizes: (
+  x-large:   (15rem, 19.5rem),      //font size: 240px line Height:312px
+  large :    (7.5rem, 10rem),       //font size: 120px line Height:160px
+  medium:    (5rem, 6.5rem),        //font size: 80px  line Height:104px
+  small :    (2.75rem, 4rem)           //font size: 48px  line Height:64px
+)!default;
+
+$h2-font-sizes: (
+  x-large :   (6rem, 8rem),        //font size: 96px  line Height: 128px
+  large :     (3.15rem, 4.5rem),   //font size: 50.4px  line Height: 72px    
+  medium:     (2.5rem, 3rem),        //font size: 32px  line Height: 48px
+  small :     (1.21rem, 2rem),       //font size: 24px  line Height: 32px
+  x-small :   (1rem, 2rem)       //font size: 24px  line Height: 32px
+)!default;
+
+$h3-font-sizes: (
+  x-large :   (5.5rem, 7.5rem),   //font size: 88px  line Height: 120px
+  large :     (3.5rem, 5rem),     //font size: 56px  line Height: 80px    
+  medium:     (2.7rem, 4rem),     //font size: 43.2px  line Height: 64px    
+  small :     (1.5rem, 2rem)      //font size: 24px  line Height: 32px 
+)!default;
+
+@mixin font-size($fs-map, $fs-breakpoints: $font-size-breakpoints) {
+  @each $key, $value in $fs-map { 
+      @if map-has-key($fs-breakpoints, $key){
+          $breakpoint: map-get($fs-breakpoints, $key);
+
+          @if $key == x-large { 
+              @media screen and (min-width: $breakpoint) {  
+                font-family: $font-family;
+                @include make-font-size($value);
+              }                              
+          }
+          @else {
+              @media screen and (max-width: $breakpoint) {  
+                font-family: $font-family;
+                @include make-font-size($value);
+              }
+          }
+      }
+ }
+
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($value) {
+  // If $value is a list, include both the font-size and line-height
+  @if type-of($value) == "list" {
+    font-size: nth($value, 1);
+    line-height: nth($value, 2)
+  }
+  @else {
+    font-size:$value;
+  }
+}
+
+// ===== Usage ===== //
+//@include font-size($p-font-sizes);
+//@include font-size($h1-font-sizes);
+//@include font-size($h2-font-sizes);
+
+/// **** HEADING FONT STYLES **** ///
+@mixin heading-base{
+    font-weight: $fw-black;
+    color: $heading-color;
+}
+
+@mixin heading($style) {
+    @if $style == "main" {
+        @include heading-base;
+        @include font-size($h1-font-sizes);
+    }
+
+    @else if $style == "sub" {
+        @include heading-base;
+        @include font-size($h2-font-sizes);
+    }
+
+    @else if $style == "third" {
+      @include heading-base;
+      font-weight: $fw-bold;
+      @include font-size($h3-font-sizes);
+  }
+}
+
+// ===== Usage ===== //
+.heading--primary{
+  @include heading(main);
+}
+.heading--secondary{
+  @include heading(sub);
+}
+.heading--third{
+  @include heading(third);
+}
+
+/// **** BODY FONT STYLES **** ///
+@mixin body-base{
+  @include font-size($p-font-sizes);
+  font-weight: $fw-semi-bold;
+}
+
+@mixin body($style) {
+  @if $style == "main" {
+    @include body-base;
+    color: $body-main-color;
+  }
+  @else if $style == "bold" {
+    @include body-base;
+    font-weight:$fw-bold;
+    color: $body-main-color;
+  }
+}
+
+// ===== Usage ===== //
+.body--main{
+  @include body(main);
+}
+
+.body--bold{
+  @include body(bold);
+}
