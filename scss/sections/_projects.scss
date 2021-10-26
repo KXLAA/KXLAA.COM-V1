@@ -131,6 +131,10 @@
         padding-top: 2rem;
         padding-bottom: 3rem;
         border-bottom: .5rem solid $border-color;
+
+        @include respond-to(xs){
+            border-bottom: .3rem solid $border-color;
+          }
     }
 
 }

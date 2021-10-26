@@ -94,7 +94,7 @@ $h3-font-sizes: (
 /// **** HEADING FONT STYLES **** ///
 @mixin heading-base{
     font-weight: $fw-black;
-    color: $heading-color;
+    color: $body-main-color;
 }
 
 @mixin heading($style) {

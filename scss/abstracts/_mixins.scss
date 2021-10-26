@@ -9,11 +9,9 @@ $breakpoints: (
 ) !default;
 
 
-
-
 /// **** LAYOUT SPACING **** ///
 @mixin layout-padding{
-  border: solid 10px $button-primary-bg-color;
+  border: solid 10px $border-color;
   padding: 3rem;
   margin: 1rem;
 
@@ -23,13 +21,13 @@ $breakpoints: (
   }
 
   @include respond-to(sm){
-    border: solid 7px $button-primary-bg-color;
+    border: solid 7px $border-color;
     padding: 1rem;
     margin: 1rem;
   }
 
   @include respond-to(xs){
-    border: solid 6px $button-primary-bg-color;
+    border: solid 6px $border-color;
     padding: 1rem;
     margin: .5rem;
   }
@@ -41,9 +39,7 @@ $breakpoints: (
 }
 
 // ===== Usage ===== //
-//@include layout-spacing;
-
-
+//@include layout-padding;
 
 
 /// **** MEDIA QUERIES **** ///

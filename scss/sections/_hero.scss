@@ -28,7 +28,13 @@ main{
   }
 
   &__skills:first-child{
-    padding-right: 15rem
+    padding-right: 15rem;
+
+    @include respond-to(sm){
+      padding-right: 7rem;
+    }
+
+
   }
 
   &__link--light{

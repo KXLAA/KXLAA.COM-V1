@@ -272,40 +272,6 @@ select {
   }
 }
 
-.button--primary {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 50rem;
-  padding: 3rem 5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  color: #fefeff;
-  background: #1E1D1D;
-}
-.button--primary:hover {
-  background: #4219a1;
-  transform: translateX(0rem) translateY(-0.3125rem);
-}
-.button--primary:active {
-  background: #230d55;
-  transform: translateX(0rem) translateY(0.125rem);
-}
-
-.button--full-width {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 50rem;
-  padding: 3rem 5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  display: block !important;
-  width: 100% !important;
-}
-
-.button--arrow {
-  margin-left: 1rem;
-}
-
 body {
   background-color: #fefeff;
 }
@@ -358,10 +324,6 @@ body {
   color: #230d55;
   transform: translateX(0rem) translateY(0.125rem);
   text-decoration: line-through;
-}
-
-.underline {
-  border-bottom: solid 4px #1E1D1D;
 }
 
 main {
@@ -420,6 +382,11 @@ main {
 }
 .hero__skills:first-child {
   padding-right: 15rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__skills:first-child {
+    padding-right: 7rem;
+  }
 }
 .hero__link--light {
   font-weight: 600;
@@ -625,6 +592,11 @@ main {
   padding-top: 2rem;
   padding-bottom: 3rem;
   border-bottom: 0.5rem solid #1E1D1D;
+}
+@media screen and (max-width: 480px) {
+  .projects__demo {
+    border-bottom: 0.3rem solid #1E1D1D;
+  }
 }
 
 .opened .projects__status {
