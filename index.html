@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js" defer></script>
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- HTML Meta Tags -->
@@ -42,415 +41,111 @@
   </head>
 
   <body class="body--main">
-    <header class="header heading--secondary">
-      <nav class="nav tabs">
-        <p data-tab-target="#tab__home" class="nav__link tab active">ABOUT</p>
-        <p data-tab-target="#tab__projects" class="nav__link tab">PROJECTS</p>
-        <p data-tab-target="#tab__contact" class="nav__link tab">CONTACT</p>
-      </nav>
-    </header>
+    <header class="header heading--secondary"></header>
 
-    <main class="tab__content">
-      <section id="tab__home" data-tab-content class="hero active">
-        <h1 class="hero__heading heading--primary">
-          HI, I'M KOLA <span class="hero__emoji">🤙</span>
-        </h1>
-
-        <div class="hero__cta">
-          <p>
-            <a
-              href="https://github.com/KXLAA"
-              target="_blank"
-              class="hero__link"
-              rel="noopener"
-            >
-              GITHUB
-            </a>
-          </p>
-
-          <p>
-            <a
-              href="https://drive.google.com/file/d/1ViBcBX3FLFvVEFGYNwT6xFernlA_Dh_c/view?usp=sharing"
-              target="_blank"
-              class="hero__link hero__link--right"
-              rel="noopener"
-            >
-              RESUME
-            </a>
-          </p>
-        </div>
-
-        <p class="hero__description">
-          I’m a Front-End Developer based in Lagos, Nigeria. With a background
-          in law and design, I am passionate about creating responsive
-          pixel-perfect user interfaces and dynamic web applications.
+    <main>
+      <section class="hero">
+        <p class="hero__about">
+          Hello, I'm Kola. A Front-End Developer
+          based in Lagos, Nigeria. I love
+          <a href="https://brutalistwebsites.com/" target="_blank"class="hero__brutalist">brutalist</a>
+          design and, I am passionate about creating accessible pixel-perfect
+          user interfaces that scale. You can check out my CV here.
         </p>
 
-        <p class="hero__skills-heading">Technology I currently work with:</p>
-
-        <div class="hero__skills-container">
-          <ul class="hero__skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-          </ul>
-
-          <ul class="hero__skills">
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Git / GitHub</li>
-          </ul>
-        </div>
-
-        <p class="hero__description">
-          In a bid to keep my passion alive, I have taken a number of online
-          courses such as the
-
-          <a
-            href="https://www.codecademy.com/learn/paths/front-end-engineer-career-path"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >Codecademy Frontend Engineer Career Path</a
-          >,
-
-          <a
-            href="https://www.udemy.com/course/advanced-css-and-sass/"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >Advanced CSS & Sass</a
-          >,
-
-          <a
-            href="https://www.udemy.com/course/the-complete-javascript-course/learn/"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >The Complete Javascript Course</a
-          >. I'm currently taking a course offered by the University of Helsinki
-          called
-          <a
-            href="https://fullstackopen.com/en/"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >Deep Dive Into Modern Web Development</a
-          >. The course covers React together with Redux, Node.js, MongoDB,
-          GraphQL and TypeScript.
+        <p class="hero__tech-stack">
+          I mainly work within the React ecosystem, but im eager to learn any
+          other technology to solve problems. My current stack is
+          <span class="hero__bold">JavaScript</span>,
+          <span class="hero__bold">TypeScript</span>,
+          <span class="hero__bold">Next.js</span> &
+          <span class="hero__bold">SCSS</span>.
         </p>
 
-        <p>
-          Apart from Frontend Development, I also
-          <a
-            href="https://www.mixcloud.com/CUEKXLA/"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >Dj
-          </a>
-          and
-          <a
-            href="https://soundcloud.com/kxla-burner/tracks"
-            target="_blank"
-            rel="noopener"
-            class="hero__link--light"
-            >Produce Music</a
-          >
-          in my free time. I also love Cooking.
+        <p class="hero__back-end">
+          When my project needs a backend i use
+          <span class="hero__bold">Node js</span>,
+          <span class="hero__bold">Express</span>,
+          <span class="hero__bold">Graph QL</span>, &
+          <span class="hero__bold">Mongo DB</span>.
         </p>
       </section>
 
-      <section id="tab__projects" data-tab-content class="projects">
-        <div class="projects__card">
-          <div class="projects__status"></div>
+      <section class="projects">
+        <h3 class="projects__heading">SELECTED PROJECTS</h3>
 
-          <div class="projects__content">
-            <div class="projects__title">
-              <h3 class="projects__name">Designo 7 page website</h3>
+        <div class="projects__card-container">
 
-              <div class="projects__links">
-                <a
-                  href="https://designo-multi-page-website-mocha.vercel.app/"
-                  target="_blank"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  LIVE
-                </a>
-
-                <p>|</p>
-
-                <a
-                  href="https://github.com/KXLAA/designo-multi-page-website"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  CODE
-                </a>
-              </div>
-            </div>
-
-            <div class="projects__details">
-              <div class="projects__description">
-                <video autoplay loop muted playsinline class="projects__demo">
-                  <source src="./assets/Designo.mp4" type="video/mp4" />
-                </video>
-
-                <div class="projects__tags">
-                  <p class="projects__tag">⚫️ NEXT.JS</p>
-                  <p class="projects__tag">🔴 STYLED COMPONENTS</p>
-                  <p class="projects__tag">🟠 JS</p>
-                </div>
-
-                <p class="projects__txt">
-                  A 7 page website built with Next js & Styled Components.
-                  Responsive design is implemented with React Responsive and
-                  media queries. Form validation is implemented with Formik.
-                </p>
-              </div>
-            </div>
+          <div class="projects__project">
+          <h4 class="projects__title">
+            <a href="https://www.nartefacts.com/" target="_blank">Nartefacts</a></h4>
+          
+            <p class="projects__description">A full stack application that provides color inspirations for designers with a twist, the colours are based on african album covers. Users can like color pallets & thier likes are saved to local storage</p>
           </div>
-        </div>
 
-        <div class="projects__card">
-          <div class="projects__status"></div>
 
-          <div class="projects__content">
-            <div class="projects__title">
-              <h3 class="projects__name">Natours</h3>
-
-              <div class="projects__links">
-                <a
-                  href="https://kxlaa.github.io/NATOURS-V1/"
-                  target="_blank"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  LIVE
-                </a>
-
-                <p>|</p>
-
-                <a
-                  href="https://github.com/KXLAA/NATOURS-V1"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  CODE
-                </a>
-              </div>
-            </div>
-
-            <div class="projects__details">
-              <div class="projects__description">
-                <video autoplay loop muted playsinline class="projects__demo">
-                  <source src="./assets/demo-vid-1.mp4" type="video/mp4" />
-                </video>
-
-                <div class="projects__tags">
-                  <p class="projects__tag">⚫️ HTML</p>
-                  <p class="projects__tag">🔴 SCSS</p>
-                  <p class="projects__tag">🟠 JS</p>
-                </div>
-
-                <p class="projects__txt">
-                  Natours is a modern & responsive Landing page for a fictional
-                  travel tour company designed and developed by me.
-                </p>
-              </div>
-            </div>
+          <div class="projects__project">
+            <h4 class="projects__title">
+              <a href="https://www.devportfolios.dev/" target="_blank">
+              Dev Portfolios
+              </a>
+            </h4>
+    
+            <p class="projects__description">A full stack application that curates the best software developer portfolio's on the internet. There are currenlty more than 50 portfolio's featured.</p>
           </div>
-        </div>
 
-        <div class="projects__card">
-          <div class="projects__status"></div>
-
-          <div class="projects__content">
-            <div class="projects__title">
-              <h3 class="projects__name">NASA Images</h3>
-
-              <div class="projects__links">
-                <a
-                  href="https://kxlaa.github.io/JSP-07-NASA-APOD/"
-                  target="_blank"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  LIVE
-                </a>
-
-                <p>|</p>
-
-                <a
-                  href="https://github.com/KXLAA/JSP-07-NASA-APOD"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  CODE
-                </a>
-              </div>
-            </div>
-
-            <div class="projects__details">
-              <div class="projects__description">
-                <video autoplay loop muted playsinline class="projects__demo">
-                  <source src="./assets/demo-vid-2.mp4" type="video/mp4" />
-                </video>
-
-                <div class="projects__tags">
-                  <p class="projects__tag">⚫️ HTML</p>
-                  <p class="projects__tag">🔴 SCSS</p>
-                  <p class="projects__tag">🟠 JS</p>
-                </div>
-
-                <p class="projects__txt">
-                  Made use of the NASA APOD API and Async javascript to fetch
-                  and generate HTML content. I also Implemented a favorite
-                  button where users can save their favorite image from the API
-                  to local storage.
-                </p>
-              </div>
-            </div>
+          <div class="projects__project">
+            <a href="https://www.devportfolios.dev/" target="_blank">
+              <h4 class="projects__title">Product Feedback</h4>
+            </a>
+         
+            <p>Demo of a full stack app that allows users to create, edit and delete feedback</p>
           </div>
-        </div>
 
-        <div class="projects__card">
-          <div class="projects__status"></div>
-
-          <div class="projects__content">
-            <div class="projects__title">
-              <h3 class="projects__name">Meme Generator</h3>
-
-              <div class="projects__links">
-                <a
-                  href="https://kxlaa.github.io/JSP-08-meme-generator/"
-                  target="_blank"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  LIVE
-                </a>
-
-                <p>|</p>
-
-                <a
-                  href="https://github.com/KXLAA/JSP-08-meme-generator"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  CODE
-                </a>
-              </div>
-            </div>
-
-            <div class="projects__details">
-              <div class="projects__description">
-                <video autoplay loop muted playsinline class="projects__demo">
-                  <source src="./assets/demo-vid-3.mp4" type="video/mp4" />
-                </video>
-
-                <div class="projects__tags">
-                  <p class="projects__tag">⚫️ HTML</p>
-                  <p class="projects__tag">🔴 SCSS</p>
-                  <p class="projects__tag">🟠 JS</p>
-                </div>
-
-                <p class="projects__txt">
-                  A web app that accepts image input from a user through a link
-                  or drag & drop upload. The uploaded image is rendered to the
-                  HTML canvas where a user can add text to the image. There is
-                  also download functionality, so the user can download the
-                  created meme.
-                </p>
-              </div>
-            </div>
+          <div class="projects__project">
+            <a href="https://www.devportfolios.dev/" target="_blank">
+              <h4 class="projects__title">Designgo</h4>
+            </a>
+         
+      
+            <p>7 page Website for a fictional design agency built with Next.js</p>
           </div>
-        </div>
 
-        <div class="projects__card">
-          <div class="projects__status"></div>
+          
 
-          <div class="projects__content">
-            <div class="projects__title">
-              <h3 class="projects__name">Remix</h3>
 
-              <div class="projects__links">
-                <a
-                  href="https://kxlaa.github.io/CW-08-Remix/"
-                  target="_blank"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  LIVE
-                </a>
+    
 
-                <p>|</p>
 
-                <a
-                  href="https://github.com/KXLAA/CW-08-Remix"
-                  class="projects__link"
-                  rel="noopener"
-                >
-                  CODE
-                </a>
-              </div>
-            </div>
 
-            <div class="projects__details">
-              <div class="projects__description">
-                <video autoplay loop muted playsinline class="projects__demo">
-                  <source src="./assets/demo-vid-4.mp4" type="video/mp4" />
-                </video>
 
-                <div class="projects__tags">
-                  <p class="projects__tag">⚫️ HTML</p>
-                  <p class="projects__tag">🔴 SCSS</p>
-                  <p class="projects__tag">🟠 JS</p>
-                </div>
 
-                <p class="projects__txt">
-                  A solution to an online front-end challenge that was featured
-                  in the Code-well October newsletter. A responsive three-page
-                  website with light and dark mode toggle and a three-step form
-                  implemented with Javascript.
-                </p>
-              </div>
-            </div>
+          <!-- <div class="projects__card">
+            <p>nartefacts</p>
           </div>
+          <div class="projects__card">
+            <p>devportfoilios</p>
+          </div>
+          <div class="projects__card">
+            <p>Feedback</p>
+          </div>
+          <div class="projects__card">
+            <p>Designgo</p>
+          </div> -->
         </div>
       </section>
 
-      <section id="tab__contact" data-tab-content class="contact">
-        <div class="contact__container">
-          <p class="contact__description heading--third">
-            Like what you saw ? <br />
-            Or maybe you <br />
-            just want to say HI ? <br />Hit me up
-          </p>
-
-          <div class="contact__links">
-            <a
-              href="mailto: kolade.afode@yahoo.com"
-              class="contact__link"
-              target="_blank"
-              rel="noopener"
-              >EMAIL</a
-            >
-
-            <a href="#" class="contact__link"> 07089698187 </a>
-
-            <a
-              href="https://twitter.com/KXLAA_"
-              class="contact__link"
-              target="_blank"
-              rel="noopener"
-            >
-              TWITTER
-            </a>
-          </div>
-        </div>
+      <section class="social">
+        <h3 class="social__title"">CONTACT ?</h3>
+        <p>Email</p>
+        <p>Twitter</p>
+        <p>Github</p>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__content">
+
+      </div>
+    </footer>
   </body>
 </html>

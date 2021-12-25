@@ -1,66 +1,63 @@
 /// **** UNIVERSAL BREAKPOINTS **** ///
 $breakpoints: (
-    xxs:  352px,
-    xs:   480px,
-    sm:   768px,
-    md:   992px,
-    lg:   1919px,
-    xl:   1920px
+  xxs: 352px,
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1919px,
+  xl: 1920px,
 ) !default;
 
-
 /// **** LAYOUT SPACING **** ///
-@mixin layout-padding{
-  border: solid 10px $border-color;
-  padding: 3rem;
-  margin: 1rem;
+@mixin layout-padding {
+  max-width: 2100px;
+  margin: 0 auto;
+  padding: 4rem;
 
-  @include respond-to(md){
+  @include respond-to(md) {
     padding: 2rem;
     margin: 1rem;
   }
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     border: solid 7px $border-color;
     padding: 1rem;
     margin: 1rem;
   }
 
-  @include respond-to(xs){
+  @include respond-to(xs) {
     border: solid 6px $border-color;
     padding: 1rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 
-  @include respond-to(xxs){
-    padding: .5rem;
-    margin: .5rem;
+  @include respond-to(xxs) {
+    padding: 0.5rem;
+    margin: 0.5rem;
   }
 }
 
 // ===== Usage ===== //
 //@include layout-padding;
 
-
 /// **** MEDIA QUERIES **** ///
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     $value: map-get($breakpoints, $breakpoint);
     @if $breakpoint == xl {
-      @media (min-width: $value) { 
-        @content; 
+      @media (min-width: $value) {
+        @content;
       }
-    }
-    @else {
+    } @else {
       @media screen and (max-width: $value) {
         @content;
       }
     }
   } // If the key doesn't exist in the map
-   @else {
-     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " 
      + "Please make sure it is defined in `$breakpoints` map.";
-   }
+  }
 }
 
 // ===== Usage ===== //
@@ -71,15 +68,14 @@ $breakpoints: (
 //@include respond-to(lg){}
 //@include respond-to(xl){}
 
-
 /// **** FLEX-BOX TOOLKIT **** ///
-@mixin flex($flex-direction: row, $flex-wrap: nowrap){
+@mixin flex($flex-direction: row, $flex-wrap: nowrap) {
   display: flex;
   flex-direction: $flex-direction;
   flex-wrap: $flex-wrap;
 }
 
-@mixin flex-center ($flex-direction: row) {
+@mixin flex-center($flex-direction: row) {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -6,7 +6,7 @@
 }
 
 /* Remove default styles on links */
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -29,7 +29,7 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul{
+ul {
   list-style: none;
 }
 
@@ -43,6 +43,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: $color-test-05;
 }
 
 /* A elements that don't have a class get default styles */
@@ -68,9 +69,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {

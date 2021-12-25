@@ -1,126 +1,32 @@
-main{
-    @include layout-padding;
+main {
+  @include layout-padding;
 }
 
-.hero{
+.hero {
+  padding-bottom: 5rem;
 
-  &__heading{
-    padding-bottom: .5rem;
+  &__about {
+    padding-bottom: 3rem;
   }
 
-  &__description{
-    padding-top: 3rem; 
-    padding-bottom: 3rem; 
-
-    @include respond-to(sm){
-      padding-top: 1.5rem; 
-    }
+  &__tech-stack {
+    padding-bottom: 3rem;
   }
 
-  &__skills-heading{
-    text-decoration: underline;
-    font-weight: $fw-semi-bold;
-    padding-bottom: 2rem;
+  &__bold {
+    font-weight: 700;
+    border-bottom: solid 4px yellow;
   }
 
-  &__skills-container{
-    @include flex;
-  }
-
-  &__skills:first-child{
-    padding-right: 15rem;
-
-    @include respond-to(sm){
-      padding-right: 7rem;
-    }
-
-
-  }
-
-  &__link--light{
-    font-weight: $fw-semi-bold;
-    text-decoration: underline;
+  &__brutalist {
+    background-color: yellow;
+    color: $color-test-05;
+    padding: 4px;
+    font-weight: 700;
     transition: all 0.3s ease;
 
     &:hover {
-      color:darken($hover-active-colors, 8%);
-      text-decoration: underline;
-    }
-
-    &:active {
-      color:darken($hover-active-colors, 25%);
-      text-decoration:line-through;
-    }
-
-  }
-
-
-
-  &__cta{
-    @include flex;
-    padding-bottom: 3rem; 
-    border-bottom: solid 10px $border-color;
-
-    @include respond-to(sm){
-      border-bottom: solid 7px $border-color;
-      padding-bottom: 1.5rem; 
-    }
-    @include respond-to(xs){
-      border-bottom: solid 6px $border-color;
-    }
-
-    @include respond-to(xxs){
-      padding-bottom: 1rem; 
-    }
-
-  }
-
-  &__link{
-    font-weight:$fw-black ;
-    color: $link-color;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color:darken($hover-active-colors, 8%);
-      text-decoration: underline;
-    }
-
-    &:active {
-      color:darken($hover-active-colors, 25%);
-      text-decoration:line-through;
+      background-color: #39ff14;
     }
   }
-
-  &__link{
-      margin-right: 5rem;
-
-      @include respond-to(xs){
-        margin-right: 1.5rem;
-      }
-  }
-
-  &__link--right{
-    margin-right: 0rem;
-  }
-
-  &__emoji{
-    @include respond-to(xxs){
-      display: none;
-    }
-    
-  }
-}
-
-
-//TAB FUNCTIONALITY
-[data-tab-content]{
-  display: none;
-}
-
-.active[data-tab-content]{
-  display: block;
-}
-
-.active.tab{
-  color: #501EC4;
 }
