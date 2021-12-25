@@ -274,7 +274,7 @@ select {
 }
 
 main {
-  max-width: 2100px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 4rem;
 }
@@ -336,16 +336,23 @@ main {
   font-weight: 500;
   padding-bottom: 2rem;
 }
-.projects__tech-stack {
-  padding-bottom: 3rem;
+.projects__tech {
+  font-size: 20px;
+  display: flex;
+  gap: 8px;
 }
-.projects__card-container {
-  display: grid;
+.projects__tech-text {
+  font-weight: 700;
+}
+.projects__divider {
+  font-weight: 700;
+  color: yellow;
+  font-size: 24px;
 }
 .projects__card {
   width: 100%;
   border: solid 4px yellow;
-  height: 400px;
+  aspect-ratio: 1/1;
   padding: 24px;
   border-radius: 16px;
 }
@@ -356,18 +363,23 @@ main {
   color: yellow;
 }
 
-.social__title {
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact__title {
   font-weight: 500;
   padding-bottom: 2rem;
 }
-.social__tech-stack {
+.contact__tech-stack {
   padding-bottom: 3rem;
 }
-.social__card-container {
+.contact__card-container {
   display: flex;
   gap: 5rem;
 }
-.social__card {
+.contact__card {
   width: 100%;
   border: solid 4px yellow;
   height: 400px;
