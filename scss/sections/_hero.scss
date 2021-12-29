@@ -4,29 +4,37 @@ main {
 
 .hero {
   padding-bottom: 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__about {
-    padding-bottom: 3rem;
-  }
-
-  &__tech-stack {
     padding-bottom: 3rem;
   }
 
   &__bold {
     font-weight: 700;
     border-bottom: solid 4px yellow;
-  }
-
-  &__brutalist {
-    background-color: yellow;
-    color: $color-test-05;
-    padding: 4px;
-    font-weight: 700;
     transition: all 0.3s ease;
 
+    @include respond-to(xs) {
+      border-bottom: solid 2px yellow;
+    }
+
     &:hover {
-      background-color: #39ff14;
+      background-color: yellow;
+      color: $color-test-05;
+    }
+  }
+
+  &__kola {
+    font-weight: 700;
+    border-bottom: solid 4px yellow;
+
+    @include respond-to(xs) {
+      border-bottom: solid 2px yellow;
     }
   }
 }

@@ -20,13 +20,11 @@ $breakpoints: (
   }
 
   @include respond-to(sm) {
-    border: solid 7px $border-color;
     padding: 1rem;
     margin: 1rem;
   }
 
   @include respond-to(xs) {
-    border: solid 6px $border-color;
     padding: 1rem;
     margin: 0.5rem;
   }

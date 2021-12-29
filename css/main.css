@@ -286,14 +286,12 @@ main {
 }
 @media screen and (max-width: 768px) {
   main {
-    border: solid 7px #e4e4e4;
     padding: 1rem;
     margin: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
   main {
-    border: solid 6px #e4e4e4;
     padding: 1rem;
     margin: 0.5rem;
   }
@@ -307,26 +305,37 @@ main {
 
 .hero {
   padding-bottom: 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero__about {
-  padding-bottom: 3rem;
-}
-.hero__tech-stack {
   padding-bottom: 3rem;
 }
 .hero__bold {
   font-weight: 700;
   border-bottom: solid 4px yellow;
-}
-.hero__brutalist {
-  background-color: yellow;
-  color: #101010;
-  padding: 4px;
-  font-weight: 700;
   transition: all 0.3s ease;
 }
-.hero__brutalist:hover {
-  background-color: #39ff14;
+@media screen and (max-width: 480px) {
+  .hero__bold {
+    border-bottom: solid 2px yellow;
+  }
+}
+.hero__bold:hover {
+  background-color: yellow;
+  color: #101010;
+}
+.hero__kola {
+  font-weight: 700;
+  border-bottom: solid 4px yellow;
+}
+@media screen and (max-width: 480px) {
+  .hero__kola {
+    border-bottom: solid 2px yellow;
+  }
 }
 
 .projects {
