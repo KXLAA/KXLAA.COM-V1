@@ -89,14 +89,14 @@ select {
   font-weight: 900;
   color: #e4e4e4;
 }
-@media screen and (min-width: 1919px) {
+@media screen and (min-width: 1550px) {
   .heading--primary {
     font-family: "Poppins", sans-serif;
     font-size: 15rem;
     line-height: 19.5rem;
   }
 }
-@media screen and (max-width: 1918px) {
+@media screen and (max-width: 1549px) {
   .heading--primary {
     font-family: "Poppins", sans-serif;
     font-size: 7.5rem;
@@ -122,14 +122,14 @@ select {
   font-weight: 900;
   color: #e4e4e4;
 }
-@media screen and (min-width: 1919px) {
+@media screen and (min-width: 1550px) {
   .heading--secondary {
     font-family: "Poppins", sans-serif;
     font-size: 6rem;
     line-height: 8rem;
   }
 }
-@media screen and (max-width: 1918px) {
+@media screen and (max-width: 1549px) {
   .heading--secondary {
     font-family: "Poppins", sans-serif;
     font-size: 3.15rem;
@@ -163,14 +163,14 @@ select {
   color: #e4e4e4;
   font-weight: 700;
 }
-@media screen and (min-width: 1919px) {
+@media screen and (min-width: 1550px) {
   .heading--third {
     font-family: "Poppins", sans-serif;
     font-size: 5.5rem;
     line-height: 7.5rem;
   }
 }
-@media screen and (max-width: 1918px) {
+@media screen and (max-width: 1549px) {
   .heading--third {
     font-family: "Poppins", sans-serif;
     font-size: 3.5rem;
@@ -196,14 +196,14 @@ select {
   font-weight: 500;
   color: #e4e4e4;
 }
-@media screen and (min-width: 1919px) {
+@media screen and (min-width: 1550px) {
   .body--main {
     font-family: "Poppins", sans-serif;
     font-size: 4rem;
     line-height: 5.5rem;
   }
 }
-@media screen and (max-width: 1918px) {
+@media screen and (max-width: 1549px) {
   .body--main {
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
@@ -226,47 +226,6 @@ select {
 }
 @media screen and (max-width: 352px) {
   .body--main {
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.body--bold {
-  font-weight: 500;
-  font-weight: 700;
-  color: #e4e4e4;
-}
-@media screen and (min-width: 1919px) {
-  .body--bold {
-    font-family: "Poppins", sans-serif;
-    font-size: 4rem;
-    line-height: 5.5rem;
-  }
-}
-@media screen and (max-width: 1918px) {
-  .body--bold {
-    font-family: "Poppins", sans-serif;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .body--bold {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .body--bold {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (max-width: 352px) {
-  .body--bold {
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -316,16 +275,16 @@ main {
 }
 .hero__bold {
   font-weight: 700;
-  border-bottom: solid 4px yellow;
+  border-bottom: solid 4px #ffff00;
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 480px) {
   .hero__bold {
-    border-bottom: solid 2px yellow;
+    border-bottom: solid 2px #ffff00;
   }
 }
 .hero__bold:hover {
-  background-color: yellow;
+  background-color: #ffff00;
   color: #101010;
 }
 .hero__kola {
@@ -334,6 +293,6 @@ main {
 }
 @media screen and (max-width: 480px) {
   .hero__kola {
-    border-bottom: solid 2px yellow;
+    border-bottom: solid 2px #ffff00;
   }
 }/*# sourceMappingURL=main.css.map */
