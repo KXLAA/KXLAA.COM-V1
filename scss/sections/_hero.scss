@@ -16,25 +16,25 @@ main {
 
   &__bold {
     font-weight: 700;
-    border-bottom: solid 4px yellow;
+    border-bottom: solid 4px $color-yellow;
     transition: all 0.3s ease;
 
     @include respond-to(xs) {
-      border-bottom: solid 2px yellow;
+      border-bottom: solid 2px $color-yellow;
     }
 
     &:hover {
-      background-color: yellow;
+      background-color: $color-yellow;
       color: $color-test-05;
     }
   }
 
   &__kola {
     font-weight: 700;
-    border-bottom: solid 4px #ffff00;
+    border-bottom: solid 4px $color-yellow;
 
     @include respond-to(xs) {
-      border-bottom: solid 2px yellow;
+      border-bottom: solid 2px $color-yellow;
     }
   }
 }

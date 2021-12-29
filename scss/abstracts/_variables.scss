@@ -1,24 +1,14 @@
 /// **** COLORS VARIABLES  **** ///
 // Descriptive naming
-$color-gray-light: #f3f3f3;
-$color-gray-dark: #494949;
-$color-black: #000000;
 $color-white: #e4e4e4;
 $color-cod-gray: #1e1d1d;
-$color-purple-heart: #501ec4;
-$color-scorpion: #585858;
-$color-test-01: #c8a36b;
-$color-test-02: #000000;
-$color-test-03: #ff9900;
-$color-test-05: #101010;
+$color-black: #101010;
+$color-yellow: #ffff00;
 
 // Functional naming
 //COMPONENTS ->
-$button-primary-bg-color: $color-cod-gray;
-$hover-active-colors: $color-purple-heart;
-$link-color: $color-purple-heart;
+$background-color: $color-black;
+$accent-color: $color-yellow;
 
 //TYPOGRAPHY COLORS ->
 $body-main-color: $color-white;
-
-$border-color: $color-white;
