@@ -31,7 +31,7 @@ main {
 
   &__kola {
     font-weight: 700;
-    border-bottom: solid 4px yellow;
+    border-bottom: solid 4px #ffff00;
 
     @include respond-to(xs) {
       border-bottom: solid 2px yellow;

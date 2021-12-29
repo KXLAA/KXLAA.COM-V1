@@ -330,7 +330,7 @@ main {
 }
 .hero__kola {
   font-weight: 700;
-  border-bottom: solid 4px yellow;
+  border-bottom: solid 4px #ffff00;
 }
 @media screen and (max-width: 480px) {
   .hero__kola {
